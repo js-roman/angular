@@ -66,7 +66,13 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
+          "options": {
+            "browserTarget": "frontend-angular:build",
+            "ssl": true,
+            "sslKey": "src/assets/ssl/ssl.key",
+            "sslCert": "src/assets/ssl/ssl.cer"
+          },
+         "configurations": {
             "production": {
               "browserTarget": "frontend-angular:build:production"
             },
